@@ -1,0 +1,208 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+
+:root {
+    --clr-darkbackground:#1f2937;
+    --clr-graybg:gray;
+    --clr-buttoncolor:#3882f6;
+    --fs-headerTextSze:3em;
+    --clr-headerTextColor:#f9faf8;
+    --fs-headerLinkText:1.125em;
+    --clr-headerLinkColor:#e5e7eb;
+    --fs-logo:1.5em;
+    --fs-sectionHeading: 2.25em;
+    --clr-quotesection:#e5e7eb;
+    --fs-quotetxt:1em;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box;
+    list-style: none;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    font-size: 1.3321rem;
+    font-weight: 500;
+}
+
+.container {
+    max-width: 1150px;
+    padding: 0 1em;
+    margin-inline: auto;
+}
+
+button {
+    background-color: var(--clr-buttoncolor);
+    font-size: var(--fs-headerLinkText);
+    color: var(--clr-quotesection);
+    border: none;
+    padding: .3em 1em;
+    border-radius: 15px;
+}
+header, footer {
+    background-color: var(--clr-darkbackground);
+}
+header {
+    padding: 1em 0;
+    min-height: 80vh;
+}
+
+.navbar{
+    color: var(--clr-quotesection);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: .5em 0;
+    flex-wrap: wrap;
+}
+.logo {
+    margin-right: 1em;
+    font-size: var(--fs-logo);
+    color: var(--clr-headerTextColor);
+}
+.link-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1.5rem;
+}
+.header-flex-container {
+    display: flex;
+    align-items: center;
+    min-height: 74vh;
+    color: var(--clr-quotesection);
+}
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    height: 100%;
+}
+.content .flexed-content {
+    flex-basis: 100%;
+}
+.content .gray-bg {
+    background-color: var(--clr-graybg);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+.quote-text, .nav-link{
+    font-size:1.125rem;
+}
+.content button {
+    margin: 1rem 0;
+}
+.first-section {
+    min-height: 60vh;
+}
+.first-section .container h2 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height:20%;
+    text-align: center;
+    padding: min(3vw, 1em);
+}
+.first-section .container .flex-content {
+    justify-content: center;
+}
+.first-section .flex-content {
+    height: 80%;
+    padding: min(5vw, 5em);
+}
+.flex-content .flexed-container .quote-text {
+    text-align: center;
+    margin: 2rem 0;
+}
+.first-section .flex-content .content-placeholder {
+    border: 2px solid #3882f6;
+    border-radius: 10px;
+    min-height: 150px;
+} 
+.first-section .container .flex-content {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    width: 85%;
+    margin: 0 auto;
+}
+.first-section .container .flex-content .flexed-container {
+    flex-basis: 100%;
+    padding: 0;
+}
+
+.second-section{
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+    background-color:var(--clr-headerTextColor) ;
+    color: var(--clr-darkbackground);
+}
+.second-section .container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.second-section .container .italic-paragraph {
+font-style: italic;
+}
+.second-section .container .right-text {
+    display: flex;
+    justify-content: flex-end;
+    font-style: initial;
+    font-weight: 700;
+}
+
+.third-section {
+    min-height: 50vh;
+    display: flex;
+    align-items: center;
+}
+.third-section .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--clr-buttoncolor);
+    color: var(--clr-headerTextColor);
+    padding: .8rem 0;
+    margin: 0 auto;
+}
+.last-ctn-child {
+    padding-left: 4em;
+}
+.last-ctn-child button {
+    padding: .3em 1em;
+    border-radius: 15px;
+    border: 2px solid #e5e7eb;
+    text-align: left;
+}
+.third-section .container .flexed-container-one {
+    flex-basis: 70%;
+}
+.third-section .container .flexed-container-two {
+    flex-basis: 30%;
+}
+footer {
+    background-color: var(--clr-darkbackground);
+    color: var(--clr-headerLinkColor);
+    font-size: var(--fs-quotetxt);
+    padding: 1em 0;
+}
+footer .quote-text {
+    text-align: center;
+}
+@media all and (min-width: 700px) {
+    .navbar {
+        align-items: center;
+    }
+    .navbar, .content, .link-container,
+    .first-section .container .flex-content,
+    .third-section .container{
+        flex-direction: row;
+    }
+}
